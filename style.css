@@ -76,17 +76,22 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(155,155,168,1) 35%, r
     margin: 1rem;
 }
 .book-item::after{
-    content: "hello";
+    content: "";
     display: block;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.5s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.714);
+    opacity: 0;
 }
 .book-item:hover::after{
-    background-color: rgba(0, 0, 0, 0.714);
+    transform: scaleY(1);
+    opacity: 1;
 }
 .book-image img{
     width: 100%;
@@ -100,7 +105,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(155,155,168,1) 35%, r
     text-align: center;
     display: inline-block;
     position: absolute;
-    bottom: 10%;
+    bottom: 20%;
     right: 50%;
     transform: translate(50%,50%);
     transition: all 0.5s ease-in-out;
