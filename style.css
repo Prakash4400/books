@@ -276,6 +276,6 @@ section.header-content-section{
 #book-footer p{
     font-size: 1.2rem;
 }
-.footer-icon i{
+.footer-icon i.middle{
     margin: 0 1rem;
 }
